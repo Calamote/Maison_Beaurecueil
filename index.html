@@ -17,29 +17,99 @@
        - Vue_Piscine_01.jpg
 
        MODIFICATIONS RAPIDES :
-       1. Titre du site       : cherche <title>
-       2. Lien Booking        : cherche data-booking-link
-       3. Email de test       : raphael.calamote@gmail.com
-       4. Textes              : chaque section est nommée clairement
-       5. Couleurs            : cherche :root
+       1. Nom de domaine      : cherche SITE_URL dans cette zone SEO
+       2. Image de partage    : cherche SOCIAL_IMAGE dans cette zone SEO
+       3. Lien Booking        : cherche data-booking-link
+       4. Email de contact    : cherche raphael.calamote@gmail.com
+       5. Textes              : chaque section est nommée clairement
        6. Photos              : cherche SECTION GALERIE ou src="..."
-       7. Formulaire Netlify  : le formulaire fonctionne si le site est déployé sur Netlify
+       7. Couleurs            : cherche :root
+       8. Formulaire Netlify  : le formulaire fonctionne si le site est déployé sur Netlify
 
-       IMPORTANT FORMULAIRE :
-       - Le formulaire envoie les demandes dans Netlify > Forms.
-       - Pour recevoir les demandes par mail, il faut aussi ajouter
-         raphael.calamote@gmail.com dans Netlify > Notifications.
-       - Le champ name="email" permet de répondre directement au client.
+       IMPORTANT RÉFÉRENCEMENT :
+       - Quand le nom de domaine officiel sera acheté, remplace partout :
+         https://maison-beaurecueil.netlify.app/
+         par le nouveau domaine, par exemple :
+         https://www.maison-beaurecueil-provence.com/
+       - Pour une meilleure image au partage, tu peux créer plus tard une image
+         share.jpg en 1200 x 630 px et remplacer Vue_Piscine_01.jpg par share.jpg.
        ========================================================= -->
 
-  <title>Maison de charme près d’Aix-en-Provence – Beaurecueil</title>
-  <meta name="description" content="Maison de charme à Beaurecueil, près d’Aix-en-Provence, avec piscine privée, jardin, terrasse, Wi-Fi gratuit et parking privé." />
+  <!-- =========================================================
+       SEO GOOGLE - TITRE ET DESCRIPTION
+       ========================================================= -->
+  <title>Location maison à Beaurecueil avec piscine | Aix-en-Provence</title>
+  <meta
+    name="description"
+    content="Maison de vacances à Beaurecueil près d’Aix-en-Provence : 3 chambres, piscine privée, jardin, terrasse, Wi-Fi gratuit et parking privé, au pied de la Sainte-Victoire."
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Maison Beaurecueil Provence" />
+  <meta name="theme-color" content="#f7efe2" />
 
-  <!-- Prévisualisation quand on partage le lien -->
-  <meta property="og:title" content="Maison de charme près d’Aix-en-Provence" />
-  <meta property="og:description" content="Maison de vacances à Beaurecueil avec piscine privée, terrasse, jardin et parking privé." />
-  <meta property="og:image" content="Vue_Piscine_01.jpg" />
+  <!-- SITE_URL : à remplacer par le vrai nom de domaine quand il sera acheté -->
+  <link rel="canonical" href="https://maison-beaurecueil.netlify.app/" />
+
+  <!-- =========================================================
+       PARTAGE WHATSAPP / FACEBOOK / LINKEDIN
+       SOCIAL_IMAGE : photo affichée quand on partage le lien
+       ========================================================= -->
+  <meta property="og:locale" content="fr_FR" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Maison Beaurecueil Provence" />
+  <meta property="og:title" content="Maison de charme à Beaurecueil, près d’Aix-en-Provence" />
+  <meta
+    property="og:description"
+    content="Maison de vacances avec piscine privée, jardin, terrasse, Wi-Fi gratuit et parking privé, au pied de la Sainte-Victoire."
+  />
+  <meta property="og:url" content="https://maison-beaurecueil.netlify.app/" />
+  <meta property="og:image" content="https://maison-beaurecueil.netlify.app/Vue_Piscine_01.jpg" />
+  <meta property="og:image:alt" content="Vue sur la piscine de la maison de vacances à Beaurecueil" />
+
+  <!-- Partage X / Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Maison de charme à Beaurecueil, près d’Aix-en-Provence" />
+  <meta
+    name="twitter:description"
+    content="Maison de vacances avec piscine privée, jardin, terrasse, Wi-Fi gratuit et parking privé, au pied de la Sainte-Victoire."
+  />
+  <meta name="twitter:image" content="https://maison-beaurecueil.netlify.app/Vue_Piscine_01.jpg" />
+  <meta name="twitter:image:alt" content="Vue sur la piscine de la maison de vacances à Beaurecueil" />
+
+  <!-- =========================================================
+       DONNÉES STRUCTURÉES - AIDE LES MOTEURS À COMPRENDRE LE SITE
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VacationRental",
+    "name": "Maison de charme près d’Aix-en-Provence",
+    "description": "Maison de vacances à Beaurecueil, près d’Aix-en-Provence, avec 3 chambres, piscine privée, jardin, terrasse, Wi-Fi gratuit et parking privé.",
+    "url": "https://maison-beaurecueil.netlify.app/",
+    "image": [
+      "https://maison-beaurecueil.netlify.app/Vue_Piscine_01.jpg",
+      "https://maison-beaurecueil.netlify.app/Jardin_01.jpg",
+      "https://maison-beaurecueil.netlify.app/Chambre_Main_01.jpg",
+      "https://maison-beaurecueil.netlify.app/Sainte_Victoire.jpg"
+    ],
+    "sameAs": "https://www.booking.com/Share-oAvvsu",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beaurecueil",
+      "addressRegion": "Provence-Alpes-Côte d’Azur",
+      "addressCountry": "FR"
+    },
+    "numberOfBedrooms": 3,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Piscine privée", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Jardin", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Terrasse", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuit", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Parking privé gratuit", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Cuisine équipée", "value": true }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -895,9 +965,9 @@
     <section id="maison" class="house">
       <div class="container house-grid">
         <div class="photo-stack">
-          <img src="Jardin_01.jpg" alt="Jardin de la maison à Beaurecueil" />
-          <img src="Chambre_Main_01.jpg" alt="Chambre principale" />
-          <img src="SDB_01.jpg" alt="Salle de bains avec douche" />
+          <img src="Jardin_01.jpg" alt="Jardin de la maison à Beaurecueil" loading="la decoding="async"
+          <img src="Chambre_Main_01.jpg" alt="Chambre principale de la maison de vacances à Beaurecueil" loading="la decoding="async"
+          <img src="SDB_01.jpg" alt="Salle de bains avec douche de la maison à Beaurecueil" loading="la decoding="async"
         </div>
 
         <div class="house-content">
@@ -942,27 +1012,27 @@
 
         <div class="gallery-grid">
           <figure class="gallery-item large">
-            <img src="Vue_Piscine_01.jpg" alt="Vue sur la piscine depuis la maison" />
+            <img src="Vue_Piscine_01.jpg" alt="Piscine privée de la maison de vacances à Beaurecueil" loading="la decoding="async"
             <figcaption class="gallery-caption">Piscine & extérieur</figcaption>
           </figure>
 
           <figure class="gallery-item medium">
-            <img src="Jardin_01.jpg" alt="Jardin arboré de la maison" />
+            <img src="Jardin_01.jpg" alt="Jardin arboré de la maison à Beaurecueil" loading="la decoding="async"
             <figcaption class="gallery-caption">Jardin</figcaption>
           </figure>
 
           <figure class="gallery-item small">
-            <img src="Chambre_Main_01.jpg" alt="Chambre principale de la maison" />
+            <img src="Chambre_Main_01.jpg" alt="Chambre principale de la maison de vacances à Beaurecueil" loading="la decoding="async"
             <figcaption class="gallery-caption">Chambre principale</figcaption>
           </figure>
 
           <figure class="gallery-item small">
-            <img src="Chambre_Snd_01.jpg" alt="Deuxième chambre de la maison" />
+            <img src="Chambre_Snd_01.jpg" alt="Deuxième chambre de la maison de vacances à Beaurecueil" loading="la decoding="async"
             <figcaption class="gallery-caption">Deuxième chambre</figcaption>
           </figure>
 
           <figure class="gallery-item small">
-            <img src="SDB_01.jpg" alt="Salle de bains de la maison" />
+            <img src="SDB_01.jpg" alt="Salle de bains de la maison de vacances à Beaurecueil" loading="la decoding="async"
             <figcaption class="gallery-caption">Salle de bains</figcaption>
           </figure>
         </div>
@@ -976,7 +1046,7 @@
     <section id="region" class="region">
       <div class="container region-grid">
         <div class="region-image">
-          <img src="Sainte_Victoire.jpg" alt="Vue sur la Sainte-Victoire" />
+          <img src="Sainte_Victoire.jpg" alt="Vue sur la montagne Sainte-Victoire près de Beaurecueil" loading="la decoding="async"
           <div class="region-badge">
             <div>
               <strong>37 km</strong>
@@ -1035,8 +1105,6 @@
         <div class="contact-card">
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="email_destination_test" value="raphael.calamote@gmail.com" />
-
             <p class="hidden">
               <label>Ne pas remplir : <input name="bot-field" /></label>
             </p>
