@@ -122,10 +122,7 @@
       font-size: clamp(2.2rem, 4vw, 3.6rem);
     }
 
-    h2 em,
-    h1 em {
-      font-style: italic;
-    }
+    /* Les titres restent en romain, sans italique. */
 
     .divider {
       width: 54px;
@@ -834,7 +831,7 @@
     <section id="accueil" class="hero">
       <div class="container hero-content">
         <p class="eyebrow">Beaurecueil · Provence-Alpes-Côte d’Azur</p>
-        <h1>Maison de charme<br /><em>près d’Aix-en-Provence</em></h1>
+        <h1>Maison de charme<br />près d’Aix-en-Provence</h1>
         <p>
           Une maison de vacances au calme, avec piscine privée, terrasse, jardin,
           Wi-Fi gratuit et parking privé.
@@ -856,7 +853,7 @@
       <div class="container intro-grid">
         <div class="intro-text">
           <p class="eyebrow">Présentation</p>
-          <h2>Un séjour <em>paisible</em><br />au pied de la Sainte-Victoire</h2>
+          <h2>Un séjour paisible<br />au pied de la Sainte-Victoire</h2>
           <div class="divider"></div>
           <p>
             L’hébergement <strong>Maison de charme près d’Aix-en-Provence</strong>
@@ -905,7 +902,7 @@
 
         <div class="house-content">
           <p class="eyebrow">La maison</p>
-          <h2>Confort simple<br /><em>et esprit provençal</em></h2>
+          <h2>Confort simple<br />et esprit provençal</h2>
           <div class="divider"></div>
           <p>
             La maison de vacances comprend 3 chambres, un salon avec télévision
@@ -941,7 +938,7 @@
     <section id="galerie" class="gallery">
       <div class="container">
         <p class="eyebrow">Galerie</p>
-        <h2>La maison <em>en images</em></h2>
+        <h2>La maison en images</h2>
 
         <div class="gallery-grid">
           <figure class="gallery-item large">
@@ -990,7 +987,7 @@
 
         <div class="region-content">
           <p class="eyebrow">Autour de la maison</p>
-          <h2>Entre nature,<br /><em>Aix et Sainte‑Victoire</em></h2>
+          <h2>Entre nature,<br />Aix et Sainte‑Victoire</h2>
           <div class="divider"></div>
           <p style="color: var(--text);">
             Beaurecueil offre un cadre idéal pour profiter de la Provence,
@@ -1018,16 +1015,12 @@
       <div class="container contact-grid">
         <div>
           <p class="eyebrow">Contact & réservation</p>
-          <h2>Préparer<br /><em>votre séjour</em></h2>
+          <h2>Préparer<br />votre séjour</h2>
           <div class="divider"></div>
           <p>
-            Pour consulter les disponibilités, les tarifs et les conditions de
-            réservation, le plus simple est de passer par l’annonce Booking.
-          </p>
-          <p style="margin-top: 1rem;">
-            Vous pouvez également envoyer une demande via le formulaire ci‑contre
-            si le site est hébergé sur Netlify. Les demandes de test peuvent être
-            envoyées à <a href="mailto:raphael.calamote@gmail.com">raphael.calamote@gmail.com</a>.
+            Pour consulter les disponibilités, les tarifs et les conditions de réservation,
+            le plus simple est de passer par l’annonce Booking. Vous pouvez également
+            envoyer une demande via le formulaire ci‑contre.
           </p>
           <div style="margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
             <a class="btn btn-primary" href="https://www.booking.com/Share-oAvvsu" target="_blank" rel="noopener" data-booking-link>
@@ -1081,11 +1074,6 @@
             </div>
 
             <button class="btn btn-primary" type="submit">Envoyer la demande</button>
-
-            <p class="form-note">
-              Les demandes arriveront dans Netlify &gt; Forms. Pour recevoir une copie par mail,
-              ajoutez raphael.calamote@gmail.com dans les notifications de formulaire Netlify.
-            </p>
           </form>
         </div>
       </div>
