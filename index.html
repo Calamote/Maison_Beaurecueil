@@ -19,10 +19,17 @@
        MODIFICATIONS RAPIDES :
        1. Titre du site       : cherche <title>
        2. Lien Booking        : cherche data-booking-link
-       3. Textes              : chaque section est nommée clairement
-       4. Couleurs            : cherche :root
-       5. Photos              : cherche SECTION GALERIE ou src="..."
-       6. Formulaire Netlify  : le formulaire fonctionne si le site est déployé sur Netlify
+       3. Email de test       : raphael.calamote@gmail.com
+       4. Textes              : chaque section est nommée clairement
+       5. Couleurs            : cherche :root
+       6. Photos              : cherche SECTION GALERIE ou src="..."
+       7. Formulaire Netlify  : le formulaire fonctionne si le site est déployé sur Netlify
+
+       IMPORTANT FORMULAIRE :
+       - Le formulaire envoie les demandes dans Netlify > Forms.
+       - Pour recevoir les demandes par mail, il faut aussi ajouter
+         raphael.calamote@gmail.com dans Netlify > Notifications.
+       - Le champ name="email" permet de répondre directement au client.
        ========================================================= -->
 
   <title>Maison de charme près d’Aix-en-Provence – Beaurecueil</title>
@@ -163,6 +170,16 @@
 
     .btn-secondary:hover {
       background: rgba(255, 250, 242, 0.12);
+    }
+
+    .contact .btn-secondary {
+      border-color: var(--clay);
+      color: var(--clay);
+      background: transparent;
+    }
+
+    .contact .btn-secondary:hover {
+      background: rgba(190, 104, 73, 0.08);
     }
 
     /* =========================================================
@@ -645,6 +662,15 @@
       text-transform: uppercase;
     }
 
+    .site-footer a {
+      color: rgba(255, 250, 242, 0.72);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      color: #fffaf2;
+    }
+
     /* =========================================================
        09. RESPONSIVE MOBILE
        ========================================================= */
@@ -1000,11 +1026,15 @@
           </p>
           <p style="margin-top: 1rem;">
             Vous pouvez également envoyer une demande via le formulaire ci‑contre
-            si le site est hébergé sur Netlify.
+            si le site est hébergé sur Netlify. Les demandes de test peuvent être
+            envoyées à <a href="mailto:raphael.calamote@gmail.com">raphael.calamote@gmail.com</a>.
           </p>
-          <div style="margin-top: 2rem;">
+          <div style="margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
             <a class="btn btn-primary" href="https://www.booking.com/Share-oAvvsu" target="_blank" rel="noopener" data-booking-link>
               Voir l’annonce Booking
+            </a>
+            <a class="btn btn-secondary" href="mailto:raphael.calamote@gmail.com?subject=Demande%20de%20r%C3%A9servation%20-%20Maison%20Beaurecueil">
+              Envoyer un e-mail
             </a>
           </div>
         </div>
@@ -1012,6 +1042,7 @@
         <div class="contact-card">
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="email_destination_test" value="raphael.calamote@gmail.com" />
 
             <p class="hidden">
               <label>Ne pas remplir : <input name="bot-field" /></label>
@@ -1052,7 +1083,8 @@
             <button class="btn btn-primary" type="submit">Envoyer la demande</button>
 
             <p class="form-note">
-              Si le formulaire ne fonctionne pas encore, utilisez le bouton Booking.
+              Les demandes arriveront dans Netlify &gt; Forms. Pour recevoir une copie par mail,
+              ajoutez raphael.calamote@gmail.com dans les notifications de formulaire Netlify.
             </p>
           </form>
         </div>
@@ -1066,7 +1098,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">Beaurecueil <span>·</span> Provence</div>
-      <div>Maison de charme près d’Aix-en-Provence</div>
+      <div><a href="mailto:raphael.calamote@gmail.com">raphael.calamote@gmail.com</a></div>
       <div>© 2026 – Tous droits réservés</div>
     </div>
   </footer>
