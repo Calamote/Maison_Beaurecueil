@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maison-beaurecueil.netlify.app/sitemap.xml
+Sitemap: https://maison-beaurecueil-provence.com/sitemap.xml
